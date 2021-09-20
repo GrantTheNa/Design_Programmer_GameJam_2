@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace SandBox.Staging.OS_PlayerMovement
+namespace SandBox.Staging.OS_CameraMovement
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] float playerSpeed = 2.0f;
         public LayerMask whatCanBeClickedOn;
         private NavMeshAgent myAgent;
         private Vector3 destination;
@@ -15,6 +16,7 @@ namespace SandBox.Staging.OS_PlayerMovement
         void Start()
         {
             myAgent = GetComponent<NavMeshAgent>();
+            myAgent.speed = playerSpeed;
         }
 
         // Update is called once per frame
