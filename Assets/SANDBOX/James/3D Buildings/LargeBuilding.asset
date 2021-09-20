@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 689ffbc9010e07d4b970e3fa14e62abf, type: 3}
-  m_Name: BuildingBig
+  m_Script: {fileID: 11500000, guid: 1183d92f567e96249b354299002d917c, type: 3}
+  m_Name: LargeBuilding
   m_EditorClassIdentifier: 
-  health: 1500
-  sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  health: 1000
+  score: 500
+  breakingModel: {fileID: 0}
+  rubbleModel: {fileID: 0}

@@ -6,5 +6,7 @@ using UnityEngine;
 public class BuildingStats : ScriptableObject
 {
     public float health;
-    public Sprite sprite;
+    public float score;
+    public Sprite buildingSprite;
+    public Sprite rubbleSprite;
 }

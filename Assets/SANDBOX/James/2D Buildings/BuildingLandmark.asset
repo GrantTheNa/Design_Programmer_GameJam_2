@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 689ffbc9010e07d4b970e3fa14e62abf, type: 3}
-  m_Name: BuildingSmall
+  m_Name: BuildingLandmark
   m_EditorClassIdentifier: 
-  health: 500
-  sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  health: 2000
+  score: 2500
+  buildingSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  rubbleSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
