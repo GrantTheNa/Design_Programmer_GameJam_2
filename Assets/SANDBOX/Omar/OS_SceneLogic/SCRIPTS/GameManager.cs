@@ -32,9 +32,9 @@ namespace SandBox.Staging.OS_SceneManagement
         private Camera cam;
         private CameraController camController;
         [SerializeField] private float waitBeforeNextScene = 3.0f;
-        [SerializeField] private Transform puCamStartPoint;
-        [SerializeField] private Transform puCamEndPoint;
-        [SerializeField] private Transform hwCamStartPoint;
+        [SerializeField] private Transform puCamStartPoint; //needed?
+        [SerializeField] private Transform puCamEndPoint;   //needed?
+        [SerializeField] private Transform hwCamStartPoint; //needed?
 
 
         private bool levelActive = false;
@@ -49,20 +49,15 @@ namespace SandBox.Staging.OS_SceneManagement
             camController = cam.GetComponent<CameraController>();
             
             currentSceneIndex = 0;
-
             levelActive = true;
         }
 
         private void GoToNextLevel()
         {
-            currentSceneIndex++;
-                                 
+            currentSceneIndex++;  
             SceneManager.LoadScene(currentSceneIndex);
 
-            cam = Camera.main;
-
             playerController.ResetPlayer(playerStartPoint);
-
             levelActive = true;
         }
 
@@ -70,20 +65,13 @@ namespace SandBox.Staging.OS_SceneManagement
         // Update is called once per frame
         void Update()
         {
-            if (cam == null)
-            {
-                cam = Camera.main;
-            }
-            
+            if (cam == null) cam = Camera.main;            
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 levelActive = false;
                 GoToNextLevel();
             }
-
-
-            //Debug.Log("scene 2 cam position " + cam.transform.position.z);
 
             if (cam != null && levelActive == true && cam.transform.position.z > puCamEndPoint.position.z)
             {
