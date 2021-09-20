@@ -6,11 +6,12 @@ using UnityEngine.Events;
 public class BuildingScript3D : MonoBehaviour
 {
     [SerializeField]
-    private BuildingStats buildingStats = null;
+    private BuildingStats3D buildingStats = null;
 
     private float currentHealth;
 
     private bool gettingHit = false;
+    private bool halfWay = false;
     private bool stillStanding = true;
     private float hitTime = 0.3f;
 
@@ -23,9 +24,6 @@ public class BuildingScript3D : MonoBehaviour
     {
         currentHealth = buildingStats.health;
         Debug.Log(currentHealth);
-
-        //GetComponentInChildren<SpriteRenderer>().sprite = buildingStats.buildingSprite;
-        Debug.Log(buildingStats.buildingSprite);
 
         buildingDestroyed.AddListener(DestroyBuilding);
     }
@@ -52,6 +50,15 @@ public class BuildingScript3D : MonoBehaviour
     {
         currentHealth -= playerDamage; // <---- REPLACE THIS WITH ACTUAL PLAYER DAMAGE REFERENCE
         Debug.Log(currentHealth);
+
+        if (currentHealth < buildingStats.health / 2 && !halfWay)
+        {
+            GameObject oldModel = GetComponentInChildren<Transform>().GetChild(1).gameObject;
+            Destroy(oldModel);
+            GameObject newModel = Instantiate(buildingStats.brokenModel, transform.position, Quaternion.Euler(270f, 270f, 0f));
+            newModel.transform.parent = gameObject.transform;
+            halfWay = true;
+        }
         if (currentHealth <= 0)
         {
             buildingDestroyed.Invoke();
@@ -60,11 +67,14 @@ public class BuildingScript3D : MonoBehaviour
 
     void DestroyBuilding()
     {
-        //GetComponentInChildren<SpriteRenderer>().sprite = buildingStats.rubbleSprite;
-        //GetComponent<BoxCollider>().enabled = false;
-        //stillStanding = false;
-        //currentHealth = buildingStats.health;
-        Destroy(gameObject);
+        stillStanding = false;
+        currentHealth = buildingStats.health;
+
+        GameObject oldModel = GetComponentInChildren<Transform>().GetChild(1).gameObject;
+        Destroy(oldModel);
+        GameObject newModel = Instantiate(buildingStats.rubbleModel, transform.position, Quaternion.Euler(270f, 270f, 0f));
+        newModel.transform.parent = gameObject.transform;
+        gettingHit = false;
     }
 
     void OnTriggerEnter(Collider other)

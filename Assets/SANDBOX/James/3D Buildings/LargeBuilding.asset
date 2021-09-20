@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1000
   score: 500
-  breakingModel: {fileID: 0}
-  rubbleModel: {fileID: 0}
+  brokenModel: {fileID: 5701444680493734558, guid: ac939de7850adb04c8a00554410b785f, type: 3}
+  rubbleModel: {fileID: 2180728100914998502, guid: e5a1640d5c0b2ad489df29b235e3dcc9, type: 3}

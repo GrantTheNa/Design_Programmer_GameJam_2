@@ -7,6 +7,6 @@ public class BuildingStats3D : ScriptableObject
 {
     public float health;
     public float score;
-    public GameObject breakingModel;
+    public GameObject brokenModel;
     public GameObject rubbleModel;
 }
