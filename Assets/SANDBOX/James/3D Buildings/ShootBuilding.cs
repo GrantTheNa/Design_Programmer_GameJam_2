@@ -5,9 +5,9 @@ using UnityEngine;
 public class ShootBuilding : MonoBehaviour
 {
     [SerializeField]
-    private Transform playerPos;
+    private Transform playerPos = null;
     [SerializeField]
-    private GameObject bulletPrefab;
+    private GameObject bulletPrefab = null;
 
     private float shootTime = 2f;
     // Start is called before the first frame update
