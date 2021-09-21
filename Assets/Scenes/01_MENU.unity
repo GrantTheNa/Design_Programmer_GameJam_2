@@ -491,9 +491,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 964650103}
-        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 973682582}
+        m_TargetAssemblyTypeName: MASTER_GameManager, Assembly-CSharp
+        m_MethodName: GoToNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1250,29 +1250,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: MASTER_GameManager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5581835421123268319, guid: bf1c046e567b1294ebf8534645e9e798, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf1c046e567b1294ebf8534645e9e798, type: 3}
---- !u!1 &973682581 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5581835421123268318, guid: bf1c046e567b1294ebf8534645e9e798, type: 3}
+--- !u!114 &973682582 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 973682582, guid: bf1c046e567b1294ebf8534645e9e798, type: 3}
   m_PrefabInstance: {fileID: 973682580}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &973682582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973682581}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2afe5190e8abba4f8124279ef212142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 0}
-  player: {fileID: 0}
-  playerPrefab: {fileID: 2623769205249749142, guid: 42fe56ab672c38a43bc329a5e99502e8, type: 3}
 --- !u!1 &1438385666
 GameObject:
   m_ObjectHideFlags: 0
