@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BuildingStats3D", menuName = "ScriptableObjects/BuildingStats3D")]
-public class BuildingStats3D : ScriptableObject
+[CreateAssetMenu(fileName = "BuildingStats3D", menuName = "ScriptableObjects/BuildingStats3D")] // CREATE More Of These in the 'Create' Menu
+public class BuildingStats3D : ScriptableObject // This Script holds data concerning Buildings
 {
-    public float health;
-    public float score;
-    public GameObject brokenModel;
-    public GameObject rubbleModel;
+    public float health; // Building health
+    public float score; // How many points a building is worth
+    public GameObject brokenModel; // A Prefab of a broken building
+    public GameObject rubbleModel; // A Prefab of a collapsed building
 }
