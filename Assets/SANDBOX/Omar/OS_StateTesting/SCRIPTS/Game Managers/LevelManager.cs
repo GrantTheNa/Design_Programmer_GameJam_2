@@ -5,8 +5,6 @@ using UnityEngine;
 
 namespace SandBox.Staging.OS_StateTesting
 {
-
-
     public class LevelManager : MonoBehaviour
     {
         [Header("Player")]
@@ -19,8 +17,6 @@ namespace SandBox.Staging.OS_StateTesting
         {
             GameManager_v02.instance.levelManager = this;
             //Debug.Log("level manager set");
-
-            //camController = Camera.main.GetComponent<CameraController>();
 
             //assign player / create player if null
             player = GameManager_v02.instance.AssignPlayer();
