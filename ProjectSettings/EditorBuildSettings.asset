@@ -5,13 +5,40 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/SANDBOX/Omar/OS_SceneLogic/OS_PlayScene_L01.unity
     guid: fb31e61a2af5f234b9afe9b9f6d23569
-  - enabled: 1
+  - enabled: 0
     path: Assets/SANDBOX/Omar/OS_SceneLogic/OS_PlayScene_L02.unity
     guid: 940d8b6038d212643895096f98663ea2
-  - enabled: 1
+  - enabled: 0
     path: Assets/SANDBOX/Omar/OS_SceneLogic/OS_PlayScene_L03.unity
     guid: 25266f2fb9c8b2144bbfa0b3fdd1f07a
+  - enabled: 1
+    path: Assets/SANDBOX/Omar/OS_StateTesting/SCENES/01_Menu.unity
+    guid: e8bc0bfdd341022428869de7f9817593
+  - enabled: 1
+    path: Assets/SANDBOX/Omar/OS_StateTesting/SCENES/02_PU_L01.unity
+    guid: f283bdc9e5ee6bd41a10dddfe42766b7
+  - enabled: 1
+    path: Assets/SANDBOX/Omar/OS_StateTesting/SCENES/03_DH_L01.unity
+    guid: 3307e386ac914ea4aa569bfa5fad504a
+  - enabled: 1
+    path: Assets/SANDBOX/Omar/OS_StateTesting/SCENES/04_PU_L02.unity
+    guid: 58b05b31cadaec84a94854c3fc6c10db
+  - enabled: 1
+    path: Assets/SANDBOX/Omar/OS_StateTesting/SCENES/05_DH_L02.unity
+    guid: d6f5289339f51ba4fad1664cc485b4f7
+  - enabled: 1
+    path: Assets/SANDBOX/Omar/OS_StateTesting/SCENES/06_PU_L03.unity
+    guid: ad7aecf8d3c55714d939bcec4c870d6e
+  - enabled: 1
+    path: Assets/SANDBOX/Omar/OS_StateTesting/SCENES/07_DH_L03.unity
+    guid: dc30d0eea76c68c4bb3d48f3456f9dc8
+  - enabled: 1
+    path: Assets/SANDBOX/Omar/OS_StateTesting/SCENES/08_HS.unity
+    guid: a27d8c6ed4691d247a20ee16640c385e
+  - enabled: 1
+    path: Assets/SANDBOX/Omar/OS_StateTesting/SCENES/09_GO.unity
+    guid: 7d4f8204d83235048b27707725e185e8
   m_configObjects: {}
