@@ -14,6 +14,7 @@ public class ShootBuilding : MonoBehaviour
     private bool shooting = false;
 
     private SpriteRenderer sRender;
+    private AudioSource audSource;
 
     public Sprite s_stand;
     public Sprite s_gun;
@@ -33,6 +34,8 @@ public class ShootBuilding : MonoBehaviour
         sRender = transform.parent.GetComponentInChildren<SpriteRenderer>();
         sRender.sprite = s_stand;
 
+        audSource = GetComponent<AudioSource>();
+
         bScript.buildingDestroyed.AddListener(StopShooting);
     }
 
@@ -48,6 +51,7 @@ public class ShootBuilding : MonoBehaviour
             if (shootTime <= 0)
             {
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+                audSource.Play();
                 shootTime = Random.Range(2f, 5f);
             }
             else if (shootTime > 0 && shootTime <= 1)
