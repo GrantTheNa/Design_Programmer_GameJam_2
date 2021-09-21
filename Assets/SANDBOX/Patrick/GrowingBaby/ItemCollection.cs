@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-namespace GrowingBaby
+namespace SpawningItems
 {
     public class ItemCollection : MonoBehaviour
     {

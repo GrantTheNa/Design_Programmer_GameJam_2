@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace GrowingBaby
+namespace SpawningItems
 {
     public class SpawnItems : MonoBehaviour
     {
