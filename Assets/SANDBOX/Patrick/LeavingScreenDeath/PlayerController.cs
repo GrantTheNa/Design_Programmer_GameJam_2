@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace GrowingBaby
+namespace LeavingScreenDeath
 {
     public class PlayerController : MonoBehaviour
     {

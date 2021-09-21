@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace SpawningItems
+namespace LeavingScreenDeath
 {
     public class SpawnItems : MonoBehaviour
     {
@@ -17,8 +17,6 @@ namespace SpawningItems
         void Start()
         {
             SpawnFood();
-            SpawnFood();
-            SpawnDrink();
             SpawnDrink();
         }
 

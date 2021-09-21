@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GrowingBaby
+namespace LeavingScreenDeath
 {
     public class PlayerStats : MonoBehaviour
     {

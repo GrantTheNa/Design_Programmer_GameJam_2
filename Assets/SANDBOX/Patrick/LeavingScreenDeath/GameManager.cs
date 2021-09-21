@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GrowingBaby
+namespace LeavingScreenDeath
 {
     public class GameManager : MonoBehaviour
     {

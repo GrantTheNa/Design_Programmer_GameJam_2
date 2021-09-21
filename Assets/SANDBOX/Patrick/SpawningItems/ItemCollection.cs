@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-namespace GrowingBaby
+namespace SpawningItems
 {
     public class ItemCollection : MonoBehaviour
     {
@@ -17,14 +17,18 @@ namespace GrowingBaby
         {
             if (other.gameObject.CompareTag("Food"))
             {
+                pS.plyrGrth += 1;
                 pS.plyrDmg += dmgUp;
+                pS.GrowCheck();
                 pS.UpdateDmg();
                 Debug.Log("I have eaten");
                 Destroy(other.gameObject);
             }
             else if (other.gameObject.CompareTag("Drink"))
             {
+                pS.plyrGrth += 1;
                 pS.plyrSpd += spdUp;
+                pS.GrowCheck();
                 pS.UpdateSpd();
                 Debug.Log("I have drunk");
                 Destroy(other.gameObject);

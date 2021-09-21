@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-namespace GrowingBaby
+namespace LeavingScreenDeath
 {
     public class ItemCollection : MonoBehaviour
     {
