@@ -9,22 +9,24 @@ namespace SandBox.Staging.OS_StateTesting
 
     public class LevelManager : MonoBehaviour
     {
-        [Header("Camera Controls")]
-        public CameraController camController;
-        //[SerializeField] private GameObject playerPrefab;
+        [Header("Player")]
         [SerializeField] private Transform playerStartPos;
-        //private GameObject player;
-        private PlayerController playerController;
+        private GameObject player;
+        public PlayerController playerController;
         
         // Start is called before the first frame update
         void Start()
         {
             GameManager_v02.instance.levelManager = this;
-            Debug.Log("level manager set");
+            //Debug.Log("level manager set");
 
-            camController = Camera.main.GetComponent<CameraController>();
+            //camController = Camera.main.GetComponent<CameraController>();
 
-            playerController = GameManager_v02.instance.playerController;
+            //assign player / create player if null
+            player = GameManager_v02.instance.AssignPlayer();
+            playerController = player.GetComponent<PlayerController>();
+                //if (player != null) Debug.Log("player set");
+                //if (playerController != null) Debug.Log("playerController set");
 
             OnLevelLoad();
         }

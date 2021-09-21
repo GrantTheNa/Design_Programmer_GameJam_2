@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 namespace SandBox.Staging.OS_StateTesting
 {
+
+    //enum states
+
+    //create player if player == null
+
     public class GameManager_v02 : MonoBehaviour
     {
         #region Singelton
@@ -24,8 +29,9 @@ namespace SandBox.Staging.OS_StateTesting
         private int nextSceneIndex;
 
         public LevelManager levelManager;
-        //public GameObject player;
-        public PlayerController playerController;
+
+        public GameObject player;
+        [SerializeField] private GameObject playerPrefab;
 
         // Start is called before the first frame update
         void Start()
@@ -51,6 +57,17 @@ namespace SandBox.Staging.OS_StateTesting
             nextSceneIndex = sceneIndex + 1;   
         }
 
+
+        public GameObject AssignPlayer()
+        {
+            if (player == null)
+            {
+                player = Instantiate(playerPrefab);
+                Debug.Log("Player created");
+            }
+
+            return player;
+        }
 
         // Update is called once per frame
         void Update()

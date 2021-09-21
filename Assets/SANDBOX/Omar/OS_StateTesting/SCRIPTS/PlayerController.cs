@@ -16,7 +16,8 @@ namespace SandBox.Staging.OS_StateTesting
         // Start is called before the first frame update
         void Awake()
         {
-            GameManager_v02.instance.playerController = this;
+            GameManager_v02.instance.player = gameObject;
+            //GameManager_v02.instance.playerController = this;
             
             DontDestroyOnLoad(gameObject);
             
@@ -59,7 +60,18 @@ namespace SandBox.Staging.OS_StateTesting
             Gizmos.DrawLine(transform.position, destination);
         }
 
+        public bool isPlayerInView()
+        {
+            Vector3 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
 
+            if (screenPoint.x > 0 && screenPoint.x < 1
+                && screenPoint.y > 0 && screenPoint.y < 1)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 
 }
