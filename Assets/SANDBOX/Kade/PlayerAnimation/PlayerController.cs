@@ -13,6 +13,8 @@ namespace Sandbox.Kade.PlayerAnimation
         private NavMeshAgent myAgent;
         private Vector3 destination;
 
+        public Animator animator;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -34,6 +36,28 @@ namespace Sandbox.Kade.PlayerAnimation
                     destination = hitInfo.point;
                 }
             }
+
+            if (Input.GetKey(KeyCode.Alpha0))
+            {
+                animator.SetInteger("level", 0);
+            }
+            if (Input.GetKey(KeyCode.Alpha1))
+            {
+                animator.SetInteger("level", 1);
+            }
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                animator.SetInteger("level", 2);
+            }
+            if (Input.GetKey(KeyCode.Alpha3))
+            {
+                animator.SetInteger("level", 3);
+            }
+            if (Input.GetKey(KeyCode.E))
+            {
+                animator.SetTrigger("attack");
+            }
+
         }
 
         private void OnDrawGizmosSelected()

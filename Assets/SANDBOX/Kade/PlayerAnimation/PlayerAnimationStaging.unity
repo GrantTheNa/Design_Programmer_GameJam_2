@@ -260,6 +260,7 @@ MonoBehaviour:
   whatCanBeClickedOn:
     serializedVersion: 2
     m_Bits: 256
+  animator: {fileID: 1461448254}
 --- !u!1 &1231895557
 GameObject:
   m_ObjectHideFlags: 0
