@@ -9,4 +9,6 @@ public class BuildingStats3D : ScriptableObject // This Script holds data concer
     public float score; // How many points a building is worth
     public GameObject brokenModel; // A Prefab of a broken building
     public GameObject rubbleModel; // A Prefab of a collapsed building
+    public AudioClip brokenSound; // A Sound for when the building breaks
+    public AudioClip rubbleSound; // A Sound for when the building collapses
 }
