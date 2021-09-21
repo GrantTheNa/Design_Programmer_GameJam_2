@@ -27,8 +27,8 @@ namespace SpawningItems
         // Start is called before the first frame update
         void Start()
         {
-            dmgText.text = plyrDmg.ToString();
-            spdText.text = plyrSpd.ToString();
+            //dmgText.text = plyrDmg.ToString();
+            //spdText.text = plyrSpd.ToString();
         }
 
         public void GrowCheck()

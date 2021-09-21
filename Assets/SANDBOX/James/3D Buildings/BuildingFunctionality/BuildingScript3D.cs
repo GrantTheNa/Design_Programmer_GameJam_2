@@ -8,6 +8,9 @@ public class BuildingScript3D : MonoBehaviour
     [SerializeField]
     private BuildingStats3D buildingStats = null; // A holder for Scriptable Objects (Building Stats)
 
+    private AudioSource audSource;
+    
+
     private float currentHealth; // The current health of the building
 
     private bool gettingHit = false; // The state of being hit by the player
@@ -24,6 +27,9 @@ public class BuildingScript3D : MonoBehaviour
     {
         currentHealth = buildingStats.health;
         Debug.Log(currentHealth);
+
+        audSource = GetComponent<AudioSource>();
+        
 
         buildingDestroyed.AddListener(DestroyBuilding); // Run DestroyBuilding when Event is Invoked
     }
@@ -55,8 +61,13 @@ public class BuildingScript3D : MonoBehaviour
         {
             GameObject oldModel = GetComponentInChildren<Transform>().GetChild(1).gameObject; // Find current model of building
             Destroy(oldModel); // Destroy current model of building
-            GameObject newModel = Instantiate(buildingStats.brokenModel, transform.position, Quaternion.Euler(270f, 270f, 0f)); // Make new building model
+            GameObject newModel = Instantiate(buildingStats.brokenModel, transform.position, Quaternion.Euler(270f, 270f, 270f)); // Make new building model
             newModel.transform.parent = gameObject.transform; // Make this new model a child of THIS gameobject
+
+            audSource.clip = buildingStats.brokenSound;
+            audSource.Play();
+            
+
             halfWay = true; // Stop this IF statement from running again
         }
         if (currentHealth <= 0) // IF health drops below 0&
@@ -71,8 +82,11 @@ public class BuildingScript3D : MonoBehaviour
 
         GameObject oldModel = GetComponentInChildren<Transform>().GetChild(1).gameObject; // Find current model of building
         Destroy(oldModel); // Destroy current model of building
-        GameObject newModel = Instantiate(buildingStats.rubbleModel, transform.position, Quaternion.Euler(270f, 270f, 0f)); // Make new building model
+        GameObject newModel = Instantiate(buildingStats.rubbleModel, transform.position, Quaternion.Euler(270f, 270f, 270f)); // Make new building model (CHANGE MIDDLE VALUE FOR UP-RIGHT ROTATION)
         newModel.transform.parent = gameObject.transform; // Make this new model a child of THIS gameobject
+
+        audSource.clip = buildingStats.rubbleSound;
+        audSource.Play();
 
         stillStanding = false; // The building can no longer get hit again
         gettingHit = false; // Stop hitting this building

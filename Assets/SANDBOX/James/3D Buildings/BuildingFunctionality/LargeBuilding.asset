@@ -16,3 +16,5 @@ MonoBehaviour:
   score: 500
   brokenModel: {fileID: 5701444680493734558, guid: ac939de7850adb04c8a00554410b785f, type: 3}
   rubbleModel: {fileID: 2180728100914998502, guid: e5a1640d5c0b2ad489df29b235e3dcc9, type: 3}
+  brokenSound: {fileID: 8300000, guid: 01cef4127cfcc704fbdd9b9143b2a6af, type: 3}
+  rubbleSound: {fileID: 8300000, guid: 5b7a64010475dd24987f9ff317f9e021, type: 3}
