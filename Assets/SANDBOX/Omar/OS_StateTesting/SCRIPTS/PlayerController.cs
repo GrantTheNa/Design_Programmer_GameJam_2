@@ -16,13 +16,13 @@ namespace SandBox.Staging.OS_StateTesting
         // Start is called before the first frame update
         void Awake()
         {
-            GameManager_v02.instance.player = gameObject;
-            //GameManager_v02.instance.playerController = this;
+                GameManager_v02.instance.player = gameObject;
+                //GameManager_v02.instance.playerController = this;
             
-            DontDestroyOnLoad(gameObject);
+                DontDestroyOnLoad(gameObject);
             
-            myAgent = GetComponent<NavMeshAgent>();
-            myAgent.speed = playerSpeed;
+                myAgent = GetComponent<NavMeshAgent>();
+                myAgent.speed = playerSpeed;
         }
 
         // Update is called once per frame
