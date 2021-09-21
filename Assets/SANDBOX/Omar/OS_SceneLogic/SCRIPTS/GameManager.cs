@@ -32,12 +32,12 @@ namespace SandBox.Staging.OS_SceneManagement
         private Camera cam;
         private CameraController camController;
         [SerializeField] private float waitBeforeNextScene = 3.0f;
-        [SerializeField] private Transform puCamStartPoint; //needed?
-        [SerializeField] private Transform puCamEndPoint;   //needed?
-        [SerializeField] private Transform hwCamStartPoint; //needed?
+        //[SerializeField] private Transform puCamStartPoint; //needed?
+        //[SerializeField] private Transform puCamEndPoint;   //needed?
+        //[SerializeField] private Transform hwCamStartPoint; //needed?
 
 
-        private bool levelActive = false;
+        //private bool levelActive = false;
 
         private void Start()
         {
@@ -49,7 +49,7 @@ namespace SandBox.Staging.OS_SceneManagement
             camController = cam.GetComponent<CameraController>();
             
             currentSceneIndex = 0;
-            levelActive = true;
+            //levelActive = true;
         }
 
         private void GoToNextLevel()
@@ -58,7 +58,7 @@ namespace SandBox.Staging.OS_SceneManagement
             SceneManager.LoadScene(currentSceneIndex);
 
             playerController.ResetPlayer(playerStartPoint);
-            levelActive = true;
+            //levelActive = true;
         }
 
 
@@ -69,18 +69,18 @@ namespace SandBox.Staging.OS_SceneManagement
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                levelActive = false;
+                //levelActive = false;
                 GoToNextLevel();
             }
 
-            if (cam != null && levelActive == true && cam.transform.position.z > puCamEndPoint.position.z)
-            {
-                Debug.Log("camera reached level end point");
+            //if (cam != null && levelActive == true && cam.transform.position.z > puCamEndPoint.position.z)
+            //{
+            //    Debug.Log("camera reached level end point");
                 
-                levelActive = false;
-                camController.EndCameraMovement();
-                Invoke("GoToNextLevel", waitBeforeNextScene);
-            }
+            //    levelActive = false;
+            //    camController.EndCameraMovement();
+            //    Invoke("GoToNextLevel", waitBeforeNextScene);
+            //}
         }
     }
 }

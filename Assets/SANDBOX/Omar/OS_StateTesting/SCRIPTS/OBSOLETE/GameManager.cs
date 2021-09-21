@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 namespace SandBox.Staging.OS_StateTesting
 {
 
-    //enum states
-
-    //create player if player == null
-
     public class GameManager : MonoBehaviour
     {
         //#region Singelton

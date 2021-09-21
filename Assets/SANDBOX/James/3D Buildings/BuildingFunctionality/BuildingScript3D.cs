@@ -59,7 +59,7 @@ public class BuildingScript3D : MonoBehaviour
 
         if (currentHealth < buildingStats.health / 2 && !halfWay) // IF this is the first instance where health has dropped below 50%...
         {
-            GameObject oldModel = GetComponentInChildren<Transform>().GetChild(1).gameObject; // Find current model of building
+            GameObject oldModel = GetComponentInChildren<Transform>().GetChild(2).gameObject; // Find current model of building
             Destroy(oldModel); // Destroy current model of building
             GameObject newModel = Instantiate(buildingStats.brokenModel, transform.position, Quaternion.Euler(270f, 270f, 270f)); // Make new building model
             newModel.transform.parent = gameObject.transform; // Make this new model a child of THIS gameobject
@@ -80,7 +80,7 @@ public class BuildingScript3D : MonoBehaviour
     {
         currentHealth = buildingStats.health; // Reset building health in Scriptable Object
 
-        GameObject oldModel = GetComponentInChildren<Transform>().GetChild(1).gameObject; // Find current model of building
+        GameObject oldModel = GetComponentInChildren<Transform>().GetChild(2).gameObject; // Find current model of building
         Destroy(oldModel); // Destroy current model of building
         GameObject newModel = Instantiate(buildingStats.rubbleModel, transform.position, Quaternion.Euler(270f, 270f, 270f)); // Make new building model (CHANGE MIDDLE VALUE FOR UP-RIGHT ROTATION)
         newModel.transform.parent = gameObject.transform; // Make this new model a child of THIS gameobject

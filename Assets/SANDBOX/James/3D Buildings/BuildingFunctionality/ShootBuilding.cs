@@ -6,7 +6,6 @@ public class ShootBuilding : MonoBehaviour
 {
     private BuildingScript3D bScript;
 
-    [SerializeField]
     private Transform playerPos = null;
     [SerializeField]
     private GameObject bulletPrefab = null;
@@ -14,12 +13,25 @@ public class ShootBuilding : MonoBehaviour
     [SerializeField]
     private bool shooting = false;
 
+    private SpriteRenderer sRender;
+
+    public Sprite s_stand;
+    public Sprite s_gun;
+    public Sprite s_aim;
+    public Sprite s_fire;
+
     private float shootTime = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
+        playerPos = FindObjectOfType<CharacterController>().transform;
+
         transform.LookAt(playerPos);
         bScript = transform.parent.gameObject.GetComponent<BuildingScript3D>();
+
+        sRender = transform.parent.GetComponentInChildren<SpriteRenderer>();
+        sRender.sprite = s_stand;
 
         bScript.buildingDestroyed.AddListener(StopShooting);
     }
@@ -38,6 +50,14 @@ public class ShootBuilding : MonoBehaviour
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
                 shootTime = Random.Range(2f, 5f);
             }
+            else if (shootTime > 0 && shootTime <= 1)
+            {
+                sRender.sprite = s_aim;
+            }
+            else if (shootTime > 1)
+            {
+                sRender.sprite = s_gun;
+            }
         }
         
     }
@@ -45,5 +65,6 @@ public class ShootBuilding : MonoBehaviour
     void StopShooting()
     {
         shooting = false;
+        sRender.enabled = false;
     }
 }
