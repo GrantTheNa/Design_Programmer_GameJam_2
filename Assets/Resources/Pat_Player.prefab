@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4131643386378490762}
   - component: {fileID: 4131643386378490806}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Pat_Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1
+  m_Height: 0.5
   m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
