@@ -114,13 +114,16 @@ public class PlayerStats : MonoBehaviour
 
     public void UpdateDmg()
     {
-        dmgText.text = plyrDmg.ToString();
+        //dmgText.text = plyrDmg.ToString();
+        attackText.text = plyrDmg.ToString();
     }
 
     public void UpdateSpd()
     {
         pC.playerSpeed = plyrSpd;
-        spdText.text = plyrSpd.ToString();
+        //spdText.text = plyrSpd.ToString();
+
+        speedText.text = plyrSpd.ToString();
     }
 
 
