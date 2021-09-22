@@ -18,3 +18,4 @@ MonoBehaviour:
   rubbleModel: {fileID: 1376592504736834355, guid: 34853b643b2ecf845913ee09aceaa194, type: 3}
   brokenSound: {fileID: 8300000, guid: 7e61cf7f8e96d7040918d69f81e9991f, type: 3}
   rubbleSound: {fileID: 8300000, guid: c480bfc6f995afa46a129a9ca0695838, type: 3}
+  hitSound: {fileID: 8300000, guid: 56cbf8308d56dad478c7e24ec71db5e1, type: 3}

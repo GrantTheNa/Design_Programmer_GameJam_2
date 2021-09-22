@@ -14,7 +14,7 @@ public class PlayerController_OS : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        MASTER_GameManager.instance.player = gameObject;
+        MASTER_GameManager.Instance.player = gameObject;
 
         DontDestroyOnLoad(gameObject);
 

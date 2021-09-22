@@ -12,11 +12,11 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MASTER_GameManager.instance.levelManager = this;
+        MASTER_GameManager.Instance.levelManager = this;
         //Debug.Log("level manager set");
 
         //assign player / create player if null
-        player = MASTER_GameManager.instance.AssignPlayer();
+        player = MASTER_GameManager.Instance.AssignPlayer();
         playerController = player.GetComponent<PlayerController_OS>();
         //if (player != null) Debug.Log("player set");
         //if (playerController != null) Debug.Log("playerController set");

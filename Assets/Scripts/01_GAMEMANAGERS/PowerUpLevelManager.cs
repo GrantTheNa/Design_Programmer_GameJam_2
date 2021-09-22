@@ -37,7 +37,7 @@ public class PowerUpLevelManager : LevelManager
         {
             //Debug.Log("cam has passed end point");
             camController.EndCameraMovement();
-            MASTER_GameManager.instance.GoToNextScene();
+            MASTER_GameManager.Instance.GoToNextScene();
         }
 
         if (!playerController.isPlayerInView())
@@ -49,7 +49,7 @@ public class PowerUpLevelManager : LevelManager
             {
                 Debug.Log("timer has run out");
                 camController.EndCameraMovement();
-                MASTER_GameManager.instance.GoToNextScene();
+                MASTER_GameManager.Instance.GoToNextScene();
             }
         }
         else timer = outOfViewTimer;

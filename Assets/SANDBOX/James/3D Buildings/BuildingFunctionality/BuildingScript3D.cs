@@ -9,6 +9,7 @@ public class BuildingScript3D : MonoBehaviour
     private BuildingStats3D buildingStats = null; // A holder for Scriptable Objects (Building Stats)
 
     private AudioSource audSource;
+    private AudioSource buildAudSrc;
     
 
     private float currentHealth; // The current health of the building
@@ -29,7 +30,8 @@ public class BuildingScript3D : MonoBehaviour
         Debug.Log(currentHealth);
 
         audSource = GetComponent<AudioSource>();
-        
+        buildAudSrc = GetComponentInChildren<Transform>().GetChild(2).GetComponent<AudioSource>();
+        buildAudSrc.clip = buildingStats.hitSound;
 
         buildingDestroyed.AddListener(DestroyBuilding); // Run DestroyBuilding when Event is Invoked
     }
@@ -55,6 +57,8 @@ public class BuildingScript3D : MonoBehaviour
     void WasHit()
     {
         currentHealth -= playerDamage; // <---- REPLACE THIS WITH ACTUAL PLAYER DAMAGE REFERENCE
+        
+        buildAudSrc.Play();
         Debug.Log(currentHealth);
 
         if (currentHealth < buildingStats.health / 2 && !halfWay) // IF this is the first instance where health has dropped below 50%...
@@ -63,6 +67,9 @@ public class BuildingScript3D : MonoBehaviour
             Destroy(oldModel); // Destroy current model of building
             GameObject newModel = Instantiate(buildingStats.brokenModel, transform.position, Quaternion.Euler(270f, 270f, 270f)); // Make new building model
             newModel.transform.parent = gameObject.transform; // Make this new model a child of THIS gameobject
+
+            buildAudSrc = newModel.GetComponent<AudioSource>();
+            buildAudSrc.clip = buildingStats.hitSound;
 
             audSource.clip = buildingStats.brokenSound;
             audSource.Play();
@@ -84,6 +91,9 @@ public class BuildingScript3D : MonoBehaviour
         Destroy(oldModel); // Destroy current model of building
         GameObject newModel = Instantiate(buildingStats.rubbleModel, transform.position, Quaternion.Euler(270f, 270f, 270f)); // Make new building model (CHANGE MIDDLE VALUE FOR UP-RIGHT ROTATION)
         newModel.transform.parent = gameObject.transform; // Make this new model a child of THIS gameobject
+
+        //buildAudSrc = newModel.GetComponent<AudioSource>();
+        //buildAudSrc.clip = buildingStats.hitSound;
 
         audSource.clip = buildingStats.rubbleSound;
         audSource.Play();
