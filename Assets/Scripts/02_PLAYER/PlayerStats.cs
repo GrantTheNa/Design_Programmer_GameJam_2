@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour
     public Sprite teenAlien;
     public Sprite preAdAlien;
     public Sprite adultAlien;
-    public GameObject aSprite;
+    public Animator animator;
 
     [Header("Players Stats")]
     [SerializeField] private float maxPlayerHealth = 100;
@@ -85,7 +85,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (plyrGrth == 5)
         {
-            aSprite.GetComponent<SpriteRenderer>().sprite = teenAlien;
+            animator.SetInteger("level", 1);
             plyrDmg += plyrAge;
             plyrSpd += plyrAge;
             UpdateSpd();
@@ -94,7 +94,7 @@ public class PlayerStats : MonoBehaviour
         }
         else if (plyrGrth == 10)
         {
-            aSprite.GetComponent<SpriteRenderer>().sprite = preAdAlien;
+            animator.SetInteger("level", 2);
             plyrDmg += plyrAge;
             plyrSpd += plyrAge;
             UpdateSpd();
@@ -103,7 +103,7 @@ public class PlayerStats : MonoBehaviour
         }
         else if (plyrGrth == 15)
         {
-            aSprite.GetComponent<SpriteRenderer>().sprite = adultAlien;
+            animator.SetInteger("level", 3);
             plyrDmg += plyrAge;
             plyrSpd += plyrAge;
             UpdateSpd();

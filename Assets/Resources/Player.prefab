@@ -540,7 +540,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4096613692360359681}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.7071069, z: -0, w: -0.7071067}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -548,7 +548,7 @@ Transform:
   - {fileID: 1612538675463639933}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!33 &4096613692360359708
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -671,7 +671,7 @@ MonoBehaviour:
   teenAlien: {fileID: 21300000, guid: 5a3ac61d52bf0e249b0215b62503bb00, type: 3}
   preAdAlien: {fileID: 21300000, guid: 232b6608117845b4eb59a1b6a5584d68, type: 3}
   adultAlien: {fileID: 21300000, guid: 1217fa8e6333b9842ba104492c06fba4, type: 3}
-  aSprite: {fileID: 4096613692687799829}
+  animator: {fileID: 4096613692687799826}
   maxPlayerHealth: 100
   plyrHlth: 100
   maxPlayerSpeed: 100
@@ -745,13 +745,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4096613692687799829}
-  m_LocalRotation: {x: 0.474351, y: 0.524396, z: -0.47435132, w: 0.5243957}
-  m_LocalPosition: {x: 0.65, y: 0.95000005, z: -0.189}
+  m_LocalRotation: {x: 0.70479786, y: -0.057095848, z: 0.12726416, w: 0.69556016}
+  m_LocalPosition: {x: -0.063, y: 0.878, z: 0.516}
   m_LocalScale: {x: 0.29253, y: 0.29253, z: 0.29253}
   m_Children: []
   m_Father: {fileID: 4096613692360359709}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 95.737, y: -90, z: -180}
+  m_LocalEulerAnglesHint: {x: 95.737, y: -90, z: -75}
 --- !u!33 &4096613692687799824
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (Input.GetMouseButtonDown(0))
         {
             Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -48,7 +47,7 @@ public class PlayerController : MonoBehaviour
         }
 
        
-        //transform.LookAt(Camera.main.transform.position, Vector3.up);
+        transform.LookAt(Camera.main.transform.position, Vector3.up);
 
         if (Input.GetKey(KeyCode.Alpha0))
         {

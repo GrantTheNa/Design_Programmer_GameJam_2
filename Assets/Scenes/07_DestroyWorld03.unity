@@ -12678,7 +12678,7 @@ MonoBehaviour:
   playerController: {fileID: 0}
   playerStats: {fileID: 0}
   cinemachineGO: {fileID: 5219711107853245799}
-  levelTimerMax: 10
+  levelTimerMax: 60
   timerText: {fileID: 6079981341193598211}
 --- !u!1 &5102943786315961331
 GameObject:
