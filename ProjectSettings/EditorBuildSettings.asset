@@ -69,9 +69,15 @@ EditorBuildSettings:
     path: Assets/Scenes/09_GameOver.unity
     guid: 488dd7d45355a0041a996a12cc630085
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/SANDBOX/Omar/OS_SingletonGM/OS_Scene1.unity
+    guid: 69f2e7652102d6d4e93813e81a224a8b
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/SANDBOX/Omar/OS_SingletonGM/OS_Scene2.unity
+    guid: d2a0f0c4fe4211d409e02f49a3613259
+  - enabled: 0
+    path: Assets/SANDBOX/Omar/OS_SingletonGM/OS_Scene3.unity
+    guid: ecde58f81ab64d24b95a77c5384b31b3
+  - enabled: 0
+    path: Assets/SANDBOX/Omar/OS_SingletonGM/OS_Scene4.unity
+    guid: ee5890fd6e7aa8243830ebf7a3cca5bd
   m_configObjects: {}

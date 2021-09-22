@@ -7,14 +7,25 @@ public class MASTER_GameManager : MonoBehaviour
 {
     #region Singelton
 
-    public static MASTER_GameManager instance;
+    private static MASTER_GameManager _instance;
 
-    // Start is called before the first frame update
-    void Awake()
+    public static MASTER_GameManager Instance
     {
-        instance = this;
+        get
+        {
+            if (_instance == null)
+            {
+                GameObject go = new GameObject("MASTER_GameManager");
+                go.AddComponent<MASTER_GameManager>();
+            }
+            return _instance;
+        }
     }
 
+    private void Awake()
+    {
+        _instance = this;
+    }
     #endregion
 
     private int sceneIndex;
@@ -32,6 +43,9 @@ public class MASTER_GameManager : MonoBehaviour
 
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         nextSceneIndex = sceneIndex + 1;
+
+        //if (player == null)
+        //    player = Resources.Load("TEMP_PLAYER") as GameObject;
     }
 
     public void GoToNextScene()
@@ -54,6 +68,7 @@ public class MASTER_GameManager : MonoBehaviour
     {
         if (player == null)
         {
+            playerPrefab = Resources.Load("TEMP_PLAYER") as GameObject;
             player = Instantiate(playerPrefab);
             Debug.Log("Player created");
         }
@@ -61,9 +76,17 @@ public class MASTER_GameManager : MonoBehaviour
         return player;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    //ORIGINAL SINGLETON
+    //#region Singelton
 
-    }
+    //public static MASTER_GameManager instance;
+
+    //// Start is called before the first frame update
+    //void Awake()
+    //{
+    //    instance = this;
+    //}
+
+    //#endregion
+
 }
