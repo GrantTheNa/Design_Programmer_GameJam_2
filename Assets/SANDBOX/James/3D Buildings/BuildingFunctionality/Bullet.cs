@@ -9,6 +9,8 @@ namespace Sandbox.James.Enemy
         [SerializeField]
         private float bulletSpeed = 25f;
 
+        [SerializeField] private float bulletDamage = 10.0f;
+
         private PlayerStats playerStats;
 
         // Start is called before the first frame update
@@ -25,7 +27,7 @@ namespace Sandbox.James.Enemy
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                // <-- ADD PLAYER HEALTH REFERENCE HERE
+                playerStats.ReceiveBulletDamage(bulletDamage);
             }
 
             DestroySelf();

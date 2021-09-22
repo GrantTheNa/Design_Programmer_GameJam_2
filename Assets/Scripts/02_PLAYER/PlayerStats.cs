@@ -52,6 +52,9 @@ public class PlayerStats : MonoBehaviour
         healthSlider.value = CalculateHealth();
         speedSlider.value = CalculateSpeed();
         attackSlider.value = CalculateDamage();
+
+        if (plyrHlth <= 0) 
+            MASTER_GameManager.Instance.GoToGameOverScene();
     }
 
     public void GrowCheck()
@@ -125,9 +128,9 @@ public class PlayerStats : MonoBehaviour
         attackUI.SetActive(false);
     }
 
-    public void ReceiveBulletDamage(int bulletDamage)
+    public void ReceiveBulletDamage(float bulletDamage)
     {
-
+        plyrHlth -= bulletDamage;
     }
 
 }
