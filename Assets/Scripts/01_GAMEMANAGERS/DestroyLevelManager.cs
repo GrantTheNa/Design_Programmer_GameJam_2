@@ -25,9 +25,9 @@ public class DestroyLevelManager : LevelManager
         //connect cinemachine with player
         cm = cinemachineGO.GetComponent<CinemachineVirtualCamera>();
 
-        if (MASTER_GameManager.instance.player != null)
+        if (MASTER_GameManager.Instance.player != null)
         {
-            var playerT = MASTER_GameManager.instance.player.transform;
+            var playerT = MASTER_GameManager.Instance.player.transform;
             cm.LookAt = playerT;
             cm.Follow = playerT;
         }
@@ -39,7 +39,7 @@ public class DestroyLevelManager : LevelManager
         levelTimer -= Time.deltaTime;
         timerText.text = ((int)levelTimer + 1).ToString();
 
-        if (levelTimer < 0) MASTER_GameManager.instance.GoToNextScene();
+        if (levelTimer < 0) MASTER_GameManager.Instance.GoToNextScene();
     }
 
     public override void OnLevelUnload()
