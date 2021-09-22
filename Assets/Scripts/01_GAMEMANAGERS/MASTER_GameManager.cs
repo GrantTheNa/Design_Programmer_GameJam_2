@@ -67,6 +67,7 @@ public class MASTER_GameManager : MonoBehaviour
         {
             //playerPrefab = Resources.Load("TEMP_PLAYER") as GameObject;
             playerPrefab = Resources.Load("player") as GameObject;
+            //playerPrefab = Resources.Load("Pat_Player") as GameObject;
             player = Instantiate(playerPrefab);
             Debug.Log("Player created");
         }

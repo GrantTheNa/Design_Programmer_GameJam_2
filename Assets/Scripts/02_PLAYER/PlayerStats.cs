@@ -32,10 +32,20 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private GameObject speedUI;
     [SerializeField] private GameObject attackUI;
 
-    [Header("UI Sliders")]
-    [SerializeField] private Slider healthSlider;
-    [SerializeField] private Slider speedSlider;
-    [SerializeField] private Slider attackSlider;
+    [Header("TMPro")]
+    [SerializeField] TMP_Text healthText;
+    [SerializeField] TMP_Text speedText;
+    [SerializeField] TMP_Text attackText;
+
+    [Header("Images")]
+    [SerializeField] Image speedImg;
+    [SerializeField] Image attackImg;
+
+
+    //[Header("UI Sliders")]
+    //[SerializeField] private Slider healthSlider;
+    //[SerializeField] private Slider speedSlider;
+    //[SerializeField] private Slider attackSlider;
 
 
     //REFS
@@ -49,9 +59,23 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
-        healthSlider.value = CalculateHealth();
-        speedSlider.value = CalculateSpeed();
-        attackSlider.value = CalculateDamage();
+        healthText.text = plyrHlth.ToString();
+        speedText.text = plyrSpd.ToString();
+        attackText.text = plyrDmg.ToString();
+
+        //if (plyrSpd > 20)
+        //{
+        //    speedImg.sprite = Resources.Load("HUD/Speed_Speed") as Sprite;
+        //}
+
+        //if (plyrDmg > 20)
+        //{
+        //    attackImg.sprite = Resources.Load("HUD/Strength_strong") as Sprite;
+        //}
+
+        //healthSlider.value = CalculateHealth();
+        //speedSlider.value = CalculateSpeed();
+        //attackSlider.value = CalculateDamage();
 
         if (plyrHlth <= 0) 
             MASTER_GameManager.Instance.GoToGameOverScene();
@@ -101,18 +125,18 @@ public class PlayerStats : MonoBehaviour
 
 
 
-    private float CalculateHealth()
-    {
-        return plyrHlth / maxPlayerHealth;
-    }
-    private float CalculateSpeed()
-    {
-        return plyrSpd / maxPlayerSpeed;
-    }
-    private float CalculateDamage()
-    {
-        return plyrDmg / maxPlayerDamage;
-    }
+    //private float CalculateHealth()
+    //{
+    //    return plyrHlth / maxPlayerHealth;
+    //}
+    //private float CalculateSpeed()
+    //{
+    //    return plyrSpd / maxPlayerSpeed;
+    //}
+    //private float CalculateDamage()
+    //{
+    //    return plyrDmg / maxPlayerDamage;
+    //}
 
     public void SetPowerUpLevelUI()
     {
