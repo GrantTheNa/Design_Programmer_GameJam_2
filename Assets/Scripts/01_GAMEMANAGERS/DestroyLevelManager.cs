@@ -31,6 +31,9 @@ public class DestroyLevelManager : LevelManager
             cm.LookAt = playerT;
             cm.Follow = playerT;
         }
+
+        playerStats.SetDestroyWorldUI();
+
     }
 
     // Update is called once per frame

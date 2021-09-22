@@ -43,9 +43,6 @@ public class MASTER_GameManager : MonoBehaviour
 
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         nextSceneIndex = sceneIndex + 1;
-
-        //if (player == null)
-        //    player = Resources.Load("TEMP_PLAYER") as GameObject;
     }
 
     public void GoToNextScene()
@@ -68,7 +65,8 @@ public class MASTER_GameManager : MonoBehaviour
     {
         if (player == null)
         {
-            playerPrefab = Resources.Load("TEMP_PLAYER") as GameObject;
+            //playerPrefab = Resources.Load("TEMP_PLAYER") as GameObject;
+            playerPrefab = Resources.Load("player") as GameObject;
             player = Instantiate(playerPrefab);
             Debug.Log("Player created");
         }
