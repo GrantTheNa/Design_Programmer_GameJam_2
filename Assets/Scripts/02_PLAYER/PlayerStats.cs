@@ -9,15 +9,23 @@ public class PlayerStats : MonoBehaviour
     //VARS
     public Text dmgText;
     public Text spdText;
-    public float plyrDmg = 10;
-    public float plyrSpd = 10;
-    public float plyrHlth = 100;
+    //public float plyrDmg = 10;
+    //public float plyrSpd = 10;
+    //public float plyrHlth = 100;
     public float plyrAge = 10;
     public int plyrGrth = 0;
     public Sprite teenAlien;
     public Sprite preAdAlien;
     public Sprite adultAlien;
     public GameObject aSprite;
+
+    [Header("Players Stats")]
+    [SerializeField] private float maxPlayerHealth = 100;
+    [SerializeField] private float plyrHlth;
+    [SerializeField] private float maxPlayerSpeed = 100;
+    [SerializeField] public float plyrSpd = 10;
+    [SerializeField] private float maxPlayerDamage = 100;
+    [SerializeField] public float plyrDmg = 10;
 
     [Header("UI GOs")]
     [SerializeField] private GameObject healthUI;
@@ -36,14 +44,15 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //dmgText.text = plyrDmg.ToString();
-        //spdText.text = plyrSpd.ToString();
-
-        //NEW - UI
-        
+        plyrHlth = maxPlayerHealth;
     }
 
-
+    private void Update()
+    {
+        healthSlider.value = CalculateHealth();
+        speedSlider.value = CalculateSpeed();
+        attackSlider.value = CalculateDamage();
+    }
 
     public void GrowCheck()
     {
@@ -87,6 +96,21 @@ public class PlayerStats : MonoBehaviour
         spdText.text = plyrSpd.ToString();
     }
 
+
+
+    private float CalculateHealth()
+    {
+        return plyrHlth / maxPlayerHealth;
+    }
+    private float CalculateSpeed()
+    {
+        return plyrSpd / maxPlayerSpeed;
+    }
+    private float CalculateDamage()
+    {
+        return plyrDmg / maxPlayerDamage;
+    }
+
     public void SetPowerUpLevelUI()
     {
         healthUI.SetActive(false);
@@ -99,6 +123,11 @@ public class PlayerStats : MonoBehaviour
         healthUI.SetActive(true);
         speedUI.SetActive(false);
         attackUI.SetActive(false);
+    }
+
+    public void ReceiveBulletDamage(int bulletDamage)
+    {
+
     }
 
 }

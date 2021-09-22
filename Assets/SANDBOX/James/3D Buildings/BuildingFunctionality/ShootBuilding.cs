@@ -6,7 +6,7 @@ public class ShootBuilding : MonoBehaviour
 {
     private BuildingScript3D bScript;
 
-    private Transform playerPos = null;
+    public Transform playerPos = null;
     [SerializeField]
     private GameObject bulletPrefab = null;
 
@@ -21,14 +21,17 @@ public class ShootBuilding : MonoBehaviour
     public Sprite s_aim;
     public Sprite s_fire;
 
+    private MASTER_GameManager instance;
+
     private float shootTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerPos = FindObjectOfType<CharacterController>().transform;
+        //playerPos = MASTER_GameManager.Instance.player.transform;
+        //playerPos = FindObjectOfType<CharacterController>().transform;
 
-        transform.LookAt(playerPos);
+        transform.LookAt(playerPos); // necessary? use update instead?
         bScript = transform.parent.gameObject.GetComponent<BuildingScript3D>();
 
         shootTime = Random.Range(2f, 5f);
@@ -65,7 +68,7 @@ public class ShootBuilding : MonoBehaviour
                 sRender.sprite = s_gun;
             }
         }
-        
+
     }
 
     void StopShooting()

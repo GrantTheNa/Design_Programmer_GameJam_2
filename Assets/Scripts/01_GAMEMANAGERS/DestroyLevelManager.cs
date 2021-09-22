@@ -15,6 +15,8 @@ public class DestroyLevelManager : LevelManager
     [SerializeField] private TMP_Text timerText; 
     private float levelTimer;
 
+    private ShootBuilding[] shootBuildingControllers;
+
     public override void OnLevelLoad()
     {
         base.OnLevelLoad();
@@ -25,15 +27,23 @@ public class DestroyLevelManager : LevelManager
         //connect cinemachine with player
         cm = cinemachineGO.GetComponent<CinemachineVirtualCamera>();
 
+
+        shootBuildingControllers = FindObjectsOfType<ShootBuilding>();
+
         if (MASTER_GameManager.Instance.player != null)
         {
             var playerT = MASTER_GameManager.Instance.player.transform;
             cm.LookAt = playerT;
             cm.Follow = playerT;
+
+            foreach(var shootBuildingScript in shootBuildingControllers)
+            {
+                shootBuildingScript.playerPos = playerT;
+            }
         }
 
         playerStats.SetDestroyWorldUI();
-
+        
     }
 
     // Update is called once per frame
