@@ -74,6 +74,11 @@ public class MASTER_GameManager : MonoBehaviour
         return player;
     }
 
+    public void GoToGameOverScene()
+    {
+        SceneManager.LoadScene("09_GameOver");
+    }
+
     //ORIGINAL SINGLETON
     //#region Singelton
 

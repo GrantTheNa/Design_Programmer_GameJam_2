@@ -1045,7 +1045,7 @@ GameObject:
   - component: {fileID: 344097019737183143}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1183,15 +1183,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgText: {fileID: 0}
   spdText: {fileID: 0}
-  plyrDmg: 100
-  plyrSpd: 100
-  plyrHlth: 100
   plyrAge: 10
   plyrGrth: 0
   teenAlien: {fileID: 21300000, guid: 5a3ac61d52bf0e249b0215b62503bb00, type: 3}
   preAdAlien: {fileID: 21300000, guid: 232b6608117845b4eb59a1b6a5584d68, type: 3}
   adultAlien: {fileID: 21300000, guid: 1217fa8e6333b9842ba104492c06fba4, type: 3}
   aSprite: {fileID: 4096613692687799829}
+  maxPlayerHealth: 100
+  plyrHlth: 100
+  maxPlayerSpeed: 100
+  plyrSpd: 100
+  maxPlayerDamage: 100
+  plyrDmg: 100
   healthUI: {fileID: 444419652744042172}
   speedUI: {fileID: 1864826880116202213}
   attackUI: {fileID: 466455985613685878}
