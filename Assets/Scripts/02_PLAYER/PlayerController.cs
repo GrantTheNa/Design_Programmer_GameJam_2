@@ -33,8 +33,14 @@ public class PlayerController : MonoBehaviour
             Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
 
+            Debug.Log(myRay);
+            
+
+            Debug.Log("mouse was clicked");
+
             if (Physics.Raycast(myRay, out hitInfo, 100, whatCanBeClickedOn))
             {
+                Debug.Log("Click hit the ground");
                 myAgent.SetDestination(hitInfo.point);
                 destination = hitInfo.point;
             }

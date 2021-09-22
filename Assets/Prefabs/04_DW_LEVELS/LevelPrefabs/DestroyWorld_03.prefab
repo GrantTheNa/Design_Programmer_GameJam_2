@@ -7040,6 +7040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -7508,6 +7509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -7815,6 +7817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -8605,6 +8608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -8751,6 +8755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -8897,6 +8902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -9043,6 +9049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -9511,6 +9518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -9818,6 +9826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -10286,6 +10295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -10593,6 +10603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -10739,6 +10750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -11046,6 +11058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -11514,6 +11527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -11982,6 +11996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -12128,6 +12143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -12274,6 +12290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -12742,6 +12759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -12888,6 +12906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -13034,6 +13053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -13341,6 +13361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -13487,6 +13508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -13633,6 +13655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -13779,6 +13802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -13925,6 +13949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -14071,6 +14096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -14217,6 +14243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -14846,6 +14873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -14992,6 +15020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 0
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -15541,6 +15570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -15687,6 +15717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -63707,7 +63738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7850108397520914599}
   m_Layer: 0
-  m_Name: DestroyWorld3
+  m_Name: DestroyWorld_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63722,7 +63753,7 @@ Transform:
   m_GameObject: {fileID: 7850108397520914598}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7850108397493588674}
   - {fileID: 7850108395636138938}
@@ -69850,6 +69881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -69996,6 +70028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -70142,6 +70175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -70610,6 +70644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -71239,6 +71274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -71385,6 +71421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -72175,6 +72212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -72482,6 +72520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -72628,6 +72667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -72774,6 +72814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
@@ -72920,6 +72961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
   shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}

@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a7fea09d297d2458c75384e2f8b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   bulletPrefab: {fileID: 5229807905006582435, guid: e1f88776cce907941ada84bbe0afe35b, type: 3}
-  shooting: 0
+  shooting: 1
   s_stand: {fileID: 21300000, guid: 1fd10b1f7ee01e84a8843cd59ef0d04d, type: 3}
   s_gun: {fileID: 21300000, guid: 1931036b297e1c249a867311dad33e24, type: 3}
   s_aim: {fileID: 21300000, guid: 57adc9e9ae9a2c94a9441a1dfac8155a, type: 3}
