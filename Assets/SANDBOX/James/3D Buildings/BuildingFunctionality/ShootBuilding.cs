@@ -21,7 +21,7 @@ public class ShootBuilding : MonoBehaviour
     public Sprite s_aim;
     public Sprite s_fire;
 
-    private float shootTime = 2f;
+    private float shootTime;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,8 @@ public class ShootBuilding : MonoBehaviour
 
         transform.LookAt(playerPos);
         bScript = transform.parent.gameObject.GetComponent<BuildingScript3D>();
+
+        shootTime = Random.Range(2f, 5f);
 
         sRender = transform.parent.GetComponentInChildren<SpriteRenderer>();
         sRender.sprite = s_stand;

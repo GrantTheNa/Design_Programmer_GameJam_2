@@ -11,4 +11,5 @@ public class BuildingStats3D : ScriptableObject // This Script holds data concer
     public GameObject rubbleModel; // A Prefab of a collapsed building
     public AudioClip brokenSound; // A Sound for when the building breaks
     public AudioClip rubbleSound; // A Sound for when the building collapses
+    public AudioClip hitSound; // A SOund for when a building loses health
 }
