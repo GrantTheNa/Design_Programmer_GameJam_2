@@ -64,7 +64,6 @@ public class BuildingScript3D : MonoBehaviour
         //Debug.Log("New Building Health " + currentHealth);
         
         buildAudSrc.Play();
-        //Debug.Log(currentHealth);
 
         if (currentHealth < buildingStats.health / 2 && !halfWay) // IF this is the first instance where health has dropped below 50%...
         {
