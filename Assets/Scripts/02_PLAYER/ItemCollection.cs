@@ -18,7 +18,6 @@ public class ItemCollection : MonoBehaviour
             pS.plyrGrth += 1;
             pS.plyrDmg += dmgUp;
             pS.GrowCheck();
-            pS.UpdateDmg();
             Debug.Log("I have eaten");
             Destroy(other.gameObject);
         }

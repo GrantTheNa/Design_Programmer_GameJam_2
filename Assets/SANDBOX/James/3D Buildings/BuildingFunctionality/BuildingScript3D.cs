@@ -10,7 +10,8 @@ public class BuildingScript3D : MonoBehaviour
 
     private AudioSource audSource;
     private AudioSource buildAudSrc;
-    
+
+    private PlayerStats playerStats;
 
     private float currentHealth; // The current health of the building
 
@@ -26,8 +27,10 @@ public class BuildingScript3D : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerStats = MASTER_GameManager.Instance.player.GetComponent<PlayerStats>();
+        
         currentHealth = buildingStats.health;
-        Debug.Log(currentHealth);
+        //Debug.Log(currentHealth);
 
         audSource = GetComponent<AudioSource>();
         buildAudSrc = GetComponentInChildren<Transform>().GetChild(2).GetComponent<AudioSource>();
@@ -56,10 +59,12 @@ public class BuildingScript3D : MonoBehaviour
 
     void WasHit()
     {
-        currentHealth -= playerDamage; // <---- REPLACE THIS WITH ACTUAL PLAYER DAMAGE REFERENCE
+        //Debug.Log("Building Health: " + currentHealth + " minus " + playerStats.GetPlayerDamage());
+        currentHealth -= playerStats.GetPlayerDamage();
+        //Debug.Log("New Building Health " + currentHealth);
         
         buildAudSrc.Play();
-        Debug.Log(currentHealth);
+        //Debug.Log(currentHealth);
 
         if (currentHealth < buildingStats.health / 2 && !halfWay) // IF this is the first instance where health has dropped below 50%...
         {

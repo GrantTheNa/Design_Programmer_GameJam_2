@@ -7,8 +7,8 @@ using TMPro;
 public class PlayerStats : MonoBehaviour
 {
     //VARS
-    public Text dmgText;
-    public Text spdText;
+    //public Text dmgText;
+    //public Text spdText;
     //public float plyrDmg = 10;
     //public float plyrSpd = 10;
     //public float plyrHlth = 100;
@@ -23,30 +23,24 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float maxPlayerHealth = 100;
     [SerializeField] private float plyrHlth;
     [SerializeField] private float maxPlayerSpeed = 100;
-    [SerializeField] public float plyrSpd = 10;
+    [SerializeField] public float plyrSpd = 5;
     [SerializeField] private float maxPlayerDamage = 100;
-    [SerializeField] public float plyrDmg = 10;
+    [SerializeField] public float plyrDmg = 5;
+    public float GetPlayerDamage() { return plyrDmg; } //called by buildings script
 
     [Header("UI GOs")]
     [SerializeField] private GameObject healthUI;
-    [SerializeField] private GameObject speedUI;
-    [SerializeField] private GameObject attackUI;
-
-    [Header("TMPro")]
-    [SerializeField] TMP_Text healthText;
-    [SerializeField] TMP_Text speedText;
-    [SerializeField] TMP_Text attackText;
+    [SerializeField] private GameObject speedAttackUI;
 
     [Header("Images")]
     [SerializeField] Image speedImg;
     [SerializeField] Image attackImg;
 
 
-    //[Header("UI Sliders")]
-    //[SerializeField] private Slider healthSlider;
-    //[SerializeField] private Slider speedSlider;
-    //[SerializeField] private Slider attackSlider;
-
+    [Header("UI Sliders")]
+    [SerializeField] private Slider healthSlider;
+    [SerializeField] private Slider speedSlider;
+    [SerializeField] private Slider attackSlider;
 
     //REFS
     public PlayerController pC;
@@ -55,30 +49,23 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         plyrHlth = maxPlayerHealth;
+        plyrSpd = 5.0f;
+        plyrDmg = 5.0f;
     }
 
     private void Update()
     {
-        healthText.text = plyrHlth.ToString();
-        speedText.text = plyrSpd.ToString();
-        attackText.text = plyrDmg.ToString();
+        UpdateUISliders();
 
-        //if (plyrSpd > 20)
-        //{
-        //    speedImg.sprite = Resources.Load("HUD/Speed_Speed") as Sprite;
-        //}
-
-        //if (plyrDmg > 20)
-        //{
-        //    attackImg.sprite = Resources.Load("HUD/Strength_strong") as Sprite;
-        //}
-
-        //healthSlider.value = CalculateHealth();
-        //speedSlider.value = CalculateSpeed();
-        //attackSlider.value = CalculateDamage();
-
-        if (plyrHlth <= 0) 
+        if (plyrHlth <= 0)
             MASTER_GameManager.Instance.GoToGameOverScene();
+    }
+
+    private void UpdateUISliders()
+    {
+        healthSlider.value = CalculateHealth();
+        speedSlider.value = CalculateSpeed();
+        attackSlider.value = CalculateDamage();
     }
 
     public void GrowCheck()
@@ -89,7 +76,6 @@ public class PlayerStats : MonoBehaviour
             plyrDmg += plyrAge;
             plyrSpd += plyrAge;
             UpdateSpd();
-            UpdateDmg();
             Debug.Log("I have aged");
         }
         else if (plyrGrth == 10)
@@ -98,7 +84,6 @@ public class PlayerStats : MonoBehaviour
             plyrDmg += plyrAge;
             plyrSpd += plyrAge;
             UpdateSpd();
-            UpdateDmg();
             Debug.Log("I have aged");
         }
         else if (plyrGrth == 15)
@@ -106,53 +91,41 @@ public class PlayerStats : MonoBehaviour
             animator.SetInteger("level", 3);
             plyrDmg += plyrAge;
             plyrSpd += plyrAge;
+
+            pC.UpgradePlayerSpeed(plyrSpd);
             UpdateSpd();
-            UpdateDmg();
             Debug.Log("I have aged");
         }
     }
 
-    public void UpdateDmg()
-    {
-        //dmgText.text = plyrDmg.ToString();
-        attackText.text = plyrDmg.ToString();
-    }
-
     public void UpdateSpd()
     {
-        pC.playerSpeed = plyrSpd;
-        //spdText.text = plyrSpd.ToString();
-
-        speedText.text = plyrSpd.ToString();
+        pC.UpgradePlayerSpeed(plyrSpd);
     }
 
-
-
-    //private float CalculateHealth()
-    //{
-    //    return plyrHlth / maxPlayerHealth;
-    //}
-    //private float CalculateSpeed()
-    //{
-    //    return plyrSpd / maxPlayerSpeed;
-    //}
-    //private float CalculateDamage()
-    //{
-    //    return plyrDmg / maxPlayerDamage;
-    //}
+    private float CalculateHealth()
+    {
+        return plyrHlth / maxPlayerHealth;
+    }
+    private float CalculateSpeed()
+    {
+        return plyrSpd / maxPlayerSpeed;
+    }
+    private float CalculateDamage()
+    {
+        return plyrDmg / maxPlayerDamage;
+    }
 
     public void SetPowerUpLevelUI()
     {
         healthUI.SetActive(false);
-        speedUI.SetActive(true);
-        attackUI.SetActive(true);
+        speedAttackUI.SetActive(true);
     }
 
     public void SetDestroyWorldUI()
     {
         healthUI.SetActive(true);
-        speedUI.SetActive(false);
-        attackUI.SetActive(false);
+        speedAttackUI.SetActive(false);
     }
 
     public void ReceiveBulletDamage(float bulletDamage)
