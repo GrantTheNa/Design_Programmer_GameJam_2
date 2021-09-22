@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
   player: {fileID: 0}
-  playerPrefab: {fileID: 2623769205249749142, guid: 42fe56ab672c38a43bc329a5e99502e8, type: 3}
+  playerPrefab: {fileID: 4096613692360359681, guid: dcc7cc5d9173ebb4ebf662165e811d06, type: 3}

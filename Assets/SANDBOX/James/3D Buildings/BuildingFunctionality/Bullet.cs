@@ -2,30 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+namespace Sandbox.James.Enemy
 {
-    [SerializeField]
-    private float bulletSpeed = 25f;
-
-    // Start is called before the first frame update
-    void Start()
+    public class Bullet : MonoBehaviour
     {
-        gameObject.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
-        Invoke("DestroySelf", 5.0f);
-    }
+        [SerializeField]
+        private float bulletSpeed = 25f;
 
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        private PlayerStats playerStats;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            // <-- ADD PLAYER HEALTH REFERENCE HERE
+            GameObject player = MASTER_GameManager.Instance.player;
+            playerStats = player.GetComponent<PlayerStats>();
+            
+            gameObject.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+            Invoke("DestroySelf", 5.0f);
         }
 
-        DestroySelf();
-    }
+        void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                // <-- ADD PLAYER HEALTH REFERENCE HERE
+            }
 
-    void DestroySelf()
-    {
-        Destroy(gameObject);
+            DestroySelf();
+        }
+
+        void DestroySelf()
+        {
+            Destroy(gameObject);
+        }
     }
 }
+

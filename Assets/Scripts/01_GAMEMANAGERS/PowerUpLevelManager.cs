@@ -22,6 +22,9 @@ public class PowerUpLevelManager : LevelManager
         //set camera
         camController = Camera.main.GetComponent<PU_CameraController>();
         camController.Invoke("BeginCameraMovement", waitBeforeCamMove);
+
+        playerStats.SetPowerUpLevelUI();
+
         Debug.Log("cam moving in 3");
     }
 
