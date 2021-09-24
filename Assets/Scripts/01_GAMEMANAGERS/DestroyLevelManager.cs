@@ -15,7 +15,14 @@ public class DestroyLevelManager : LevelManager
     [SerializeField] private TMP_Text timerText; 
     private float levelTimer;
 
+    [Header("Buildings Count")]
+    [SerializeField] private TMP_Text buildingsNum;
+    [SerializeField] private int buildingCount = 0;
+
     private ShootBuilding[] shootBuildingControllers;
+    private BuildingScript3D[] buildings;
+
+    
 
     public override void OnLevelLoad()
     {
@@ -27,6 +34,9 @@ public class DestroyLevelManager : LevelManager
         //connect cinemachine with player
         cm = cinemachineGO.GetComponent<CinemachineVirtualCamera>();
 
+        buildings = FindObjectsOfType<BuildingScript3D>();
+        buildingCount = buildings.Length;
+        buildingsNum.text = buildingCount.ToString();
 
         shootBuildingControllers = FindObjectsOfType<ShootBuilding>();
 
@@ -52,11 +62,22 @@ public class DestroyLevelManager : LevelManager
         levelTimer -= Time.deltaTime;
         timerText.text = ((int)levelTimer + 1).ToString();
 
-        if (levelTimer < 0) MASTER_GameManager.Instance.GoToNextScene();
+        if (levelTimer < 0) 
+            MASTER_GameManager.Instance.GoToNextScene();
+
+        if (buildingCount == 0)
+            MASTER_GameManager.Instance.GoToNextScene();
     }
 
     public override void OnLevelUnload()
     {
         base.OnLevelUnload();
     }
+
+    public void ReduceBuildingCount()
+    {
+        buildingCount--;
+        buildingsNum.text = buildingCount.ToString();
+    }
+
 }

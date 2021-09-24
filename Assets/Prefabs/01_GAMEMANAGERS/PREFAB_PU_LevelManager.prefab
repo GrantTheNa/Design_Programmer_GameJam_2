@@ -43,10 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55395365be76f1b44b151c6c549ff0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camController: {fileID: 0}
   playerStartPos: {fileID: 6712369745520529029}
+  playerController: {fileID: 0}
+  camController: {fileID: 0}
   waitBeforeCamMove: 3
   endCameraPoint: {fileID: 6712369745321874200}
+  outOfViewTimer: 3
 --- !u!1 &6712369745321874201
 GameObject:
   m_ObjectHideFlags: 0

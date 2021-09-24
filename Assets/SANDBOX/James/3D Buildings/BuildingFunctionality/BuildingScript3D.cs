@@ -11,6 +11,7 @@ public class BuildingScript3D : MonoBehaviour
     private AudioSource audSource;
     private AudioSource buildAudSrc;
 
+    private GameObject player;
     private PlayerStats playerStats;
 
     private float currentHealth; // The current health of the building
@@ -20,14 +21,19 @@ public class BuildingScript3D : MonoBehaviour
     private bool stillStanding = true; // A state stating whether a building is destroyed or not
     private float hitTime = 0.3f; // How quickly the player hits a building
 
-    private float playerDamage = 50f; // <---- REPLACE THIS WITH ACTUAL PLAYER DAMAGE REFERENCE
+    //DELETE - replaced with player damage
+    //private float playerDamage = 50f; // <---- REPLACE THIS WITH ACTUAL PLAYER DAMAGE REFERENCE
 
     public UnityEvent buildingDestroyed = new UnityEvent(); // A Universal Event for when a building is destroyed
+
+    private DestroyLevelManager destroyLevelManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerStats = MASTER_GameManager.Instance.player.GetComponent<PlayerStats>();
+        player = MASTER_GameManager.Instance.player;
+        playerStats = player.GetComponent<PlayerStats>();
+        destroyLevelManager = FindObjectOfType<DestroyLevelManager>();
         
         currentHealth = buildingStats.health;
         //Debug.Log(currentHealth);
@@ -83,6 +89,7 @@ public class BuildingScript3D : MonoBehaviour
         }
         if (currentHealth <= 0) // IF health drops below 0&
         {
+            destroyLevelManager.ReduceBuildingCount();
             buildingDestroyed.Invoke(); // Run this event to Destroy the building
         }
     }
