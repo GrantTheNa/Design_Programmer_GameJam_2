@@ -17,7 +17,9 @@ namespace Sandbox.James.Enemy
         void Start()
         {
             GameObject player = MASTER_GameManager.Instance.player;
-            playerStats = player.GetComponent<PlayerStats>();
+
+            if(player != null)
+                playerStats = player.GetComponent<PlayerStats>();
             
             gameObject.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
             Invoke("DestroySelf", 5.0f);

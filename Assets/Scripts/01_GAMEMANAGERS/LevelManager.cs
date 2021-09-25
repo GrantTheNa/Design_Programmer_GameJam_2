@@ -35,4 +35,28 @@ public class LevelManager : MonoBehaviour
     {
 
     }
+
+    public virtual void RestartGame()
+    {
+        MASTER_GameManager.Instance.GoToLevelOne();
+        Debug.Log("lvl mgr - Restart game called");
+    }
+
+    public virtual void GoToHighScoreScreen()
+    {
+        MASTER_GameManager.Instance.GoToHighScoresScreen();
+        Debug.Log("lvl mgr - High score screen called");
+    }
+
+    public virtual void GoToMenuScreen()
+    {
+        MASTER_GameManager.Instance.GoToMenuScreen();
+        Debug.Log("lvl mgr - menu screen called");
+    }
+
+    public virtual void Quit()
+    {
+        MASTER_GameManager.Instance.QuitGame();
+        Debug.Log("lvl mgr - quit game called");
+    }
 }

@@ -55,7 +55,7 @@ EditorBuildSettings:
     guid: 64d60e42737e8dc44bb299c9f5b7d5dc
   - enabled: 1
     path: Assets/Scenes/05_DestroyWorld02.unity
-    guid: 48978ef9bac354346b258173764d53a1
+    guid: c0a19bf8316d5114199e94e0c7499c30
   - enabled: 1
     path: Assets/Scenes/06_PowerUp03.unity
     guid: cf0d721df19e3884aad50cb70023a547

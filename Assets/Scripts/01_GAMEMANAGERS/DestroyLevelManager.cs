@@ -19,10 +19,12 @@ public class DestroyLevelManager : LevelManager
     [SerializeField] private TMP_Text buildingsNum;
     [SerializeField] private int buildingCount = 0;
 
+    [Header("Game Over Prompt")]
+    [SerializeField] private GameObject gameOverPrompt;
+
     private ShootBuilding[] shootBuildingControllers;
     private BuildingScript3D[] buildings;
 
-    
 
     public override void OnLevelLoad()
     {
@@ -52,8 +54,10 @@ public class DestroyLevelManager : LevelManager
             }
         }
 
+        playerStats.destroyLevelManager = this;
+
+        gameOverPrompt.SetActive(false);
         playerStats.SetDestroyWorldUI();
-        
     }
 
     // Update is called once per frame
@@ -78,6 +82,11 @@ public class DestroyLevelManager : LevelManager
     {
         buildingCount--;
         buildingsNum.text = buildingCount.ToString();
+    }
+
+    public void SetGameOverPrompt()
+    {
+        gameOverPrompt.SetActive(true);
     }
 
 }

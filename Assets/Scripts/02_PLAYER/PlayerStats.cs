@@ -44,6 +44,7 @@ public class PlayerStats : MonoBehaviour
 
     //REFS
     public PlayerController pC;
+    public DestroyLevelManager destroyLevelManager;
 
     // Start is called before the first frame update
     void Start()
@@ -57,8 +58,14 @@ public class PlayerStats : MonoBehaviour
     {
         UpdateUISliders();
 
+        //if (plyrHlth <= 0)
+        //    MASTER_GameManager.Instance.GoToGameOverScene();
+
         if (plyrHlth <= 0)
-            MASTER_GameManager.Instance.GoToGameOverScene();
+        {
+            destroyLevelManager.SetGameOverPrompt();
+            Destroy(gameObject);
+        }
     }
 
     private void UpdateUISliders()

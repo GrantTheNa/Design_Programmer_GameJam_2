@@ -80,17 +80,26 @@ public class MASTER_GameManager : MonoBehaviour
         SceneManager.LoadScene("09_GameOver");
     }
 
-    //ORIGINAL SINGLETON
-    //#region Singelton
+    public void GoToLevelOne()
+    {
+        SceneManager.LoadScene(1);
+        Debug.Log("Master Game Manager - scene 1 loaded");
+    }
 
-    //public static MASTER_GameManager instance;
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
-    //// Start is called before the first frame update
-    //void Awake()
-    //{
-    //    instance = this;
-    //}
+    public void GoToHighScoresScreen()
+    {
+        SceneManager.LoadScene(7);
+        Debug.Log("Master Game Manager - highscore screen loaded");
+    }
 
-    //#endregion
-
+    public void GoToMenuScreen()
+    {
+        SceneManager.LoadScene(0);
+        Debug.Log("Master Game Manager - menu screen loaded");
+    }
 }
