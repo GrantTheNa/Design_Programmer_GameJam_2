@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ItemCollection : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class ItemCollection : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Food"))
         {
+            pS.UpdateFoodCounter();
             pS.plyrGrth += 1;
             pS.plyrDmg += dmgUp;
             pS.GrowCheck();
@@ -23,6 +25,7 @@ public class ItemCollection : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Drink"))
         {
+            pS.UpdateDrinkCounter();
             pS.plyrGrth += 1;
             pS.plyrSpd += spdUp;
             pS.GrowCheck();

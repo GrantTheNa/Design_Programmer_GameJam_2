@@ -5,8 +5,8 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [Header("Player")]
-    [SerializeField] private Transform playerStartPos;
-    private GameObject player;
+    [SerializeField] public Transform playerStartPos;
+    public GameObject player;
     public PlayerController playerController;
     public PlayerStats playerStats;
 
@@ -34,6 +34,13 @@ public class LevelManager : MonoBehaviour
     public virtual void OnLevelUnload()
     {
 
+    }
+
+    public virtual void SwitchPlayerRenderer()
+    {
+        var renderers = player.GetComponentsInChildren<Renderer>();
+        if (renderers[1].enabled) renderers[1].enabled = !renderers[1].enabled;
+        else renderers[1].enabled = true;
     }
 
     public virtual void RestartGame()

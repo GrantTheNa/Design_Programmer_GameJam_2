@@ -19,7 +19,6 @@ namespace Sandbox.Omar.PUSequenceLogic
         [SerializeField] private int numBlinks = 20;
         [SerializeField] private float timeBetweenBlinks = 0.05f;
         private bool blinkingStarted = false;
-        //[SerializeField] Transform teleporterStartPos; // get from level manager
         [SerializeField] Transform playerStartPos; // get from level manager
 
         [Header("Instructions")]
@@ -70,18 +69,14 @@ namespace Sandbox.Omar.PUSequenceLogic
 
             Destroy(teleporter);
             Invoke("SetInstructionCanvasActive", 2.0f);
-
-            //instructionsCanvas.SetActive(true);
         }
 
         // Update is called once per frame
         void Update()
         {
             //move cylinder down
-            
-            if (teleporter != null) TeleporterMovement();
-            
 
+            if (teleporter != null) TeleporterMovement();
 
             if (Camera.main.transform.position.z > endCameraPoint.position.z)
             {
@@ -89,22 +84,6 @@ namespace Sandbox.Omar.PUSequenceLogic
                 camController.EndCameraMovement();
                 MASTER_GameManager.Instance.GoToNextScene();
             }
-
-
-            //PLAYER DIES CONDITION
-            //if (!playerController.isPlayerInView())
-            //{
-            //    if (timer == outOfViewTimer) Debug.Log("timer has started");
-
-            //    timer -= Time.deltaTime;
-            //    if (timer < 0)
-            //    {
-            //        Debug.Log("timer has run out");
-            //        camController.EndCameraMovement();
-            //        MASTER_GameManager.Instance.GoToNextScene();
-            //    }
-            //}
-            //else timer = outOfViewTimer;
         }
 
         private void TeleporterMovement()
@@ -114,7 +93,6 @@ namespace Sandbox.Omar.PUSequenceLogic
             else if (!blinkingStarted) //teleporter.transform.position.y <= 8
             {
                 teleporterSpeed = 0;
-                //Debug.Log("Coroutine started");
 
                 StartCoroutine(BlinkTeleporter());
                 blinkingStarted = true;

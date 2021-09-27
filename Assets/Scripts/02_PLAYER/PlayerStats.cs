@@ -7,11 +7,6 @@ using TMPro;
 public class PlayerStats : MonoBehaviour
 {
     //VARS
-    //public Text dmgText;
-    //public Text spdText;
-    //public float plyrDmg = 10;
-    //public float plyrSpd = 10;
-    //public float plyrHlth = 100;
     public float plyrAge = 10;
     public int plyrGrth = 0;
     public Sprite teenAlien;
@@ -31,16 +26,23 @@ public class PlayerStats : MonoBehaviour
     [Header("UI GOs")]
     [SerializeField] private GameObject healthUI;
     [SerializeField] private GameObject speedAttackUI;
+    [SerializeField] private GameObject pickUpsUI;
 
     [Header("Images")]
     [SerializeField] Image speedImg;
     [SerializeField] Image attackImg;
 
-
     [Header("UI Sliders")]
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Slider speedSlider;
     [SerializeField] private Slider attackSlider;
+
+    [Header("Pick Up Counters")]
+    [SerializeField] private TMP_Text foodCounterText;
+    [SerializeField] private TMP_Text drinkCounterText;
+    private int foodCounter = 0;
+    private int drinkCounter = 0;
+    
 
     //REFS
     public PlayerController pC;
@@ -52,14 +54,14 @@ public class PlayerStats : MonoBehaviour
         plyrHlth = maxPlayerHealth;
         plyrSpd = 5.0f;
         plyrDmg = 5.0f;
+
+        foodCounterText.text = foodCounter.ToString();
+        drinkCounterText.text = drinkCounter.ToString();
     }
 
     private void Update()
     {
         UpdateUISliders();
-
-        //if (plyrHlth <= 0)
-        //    MASTER_GameManager.Instance.GoToGameOverScene();
 
         if (plyrHlth <= 0)
         {
@@ -105,6 +107,27 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void UpdateFoodCounter()
+    {
+        foodCounter++;
+        foodCounterText.text = foodCounter.ToString();
+    }
+
+    public void UpdateDrinkCounter()
+    {
+        drinkCounter++;
+        drinkCounterText.text = drinkCounter.ToString();
+    }
+
+    public void ResetCounters()
+    {
+        drinkCounter = 0;
+        drinkCounterText.text = drinkCounter.ToString();
+
+        foodCounter = 0;
+        foodCounterText.text = foodCounter.ToString();
+    }
+
     public void UpdateSpd()
     {
         pC.UpgradePlayerSpeed(plyrSpd);
@@ -127,12 +150,14 @@ public class PlayerStats : MonoBehaviour
     {
         healthUI.SetActive(false);
         speedAttackUI.SetActive(true);
+        pickUpsUI.SetActive(true);
     }
 
     public void SetDestroyWorldUI()
     {
         healthUI.SetActive(true);
         speedAttackUI.SetActive(false);
+        pickUpsUI.SetActive(false);
     }
 
     public void ReceiveBulletDamage(float bulletDamage)
