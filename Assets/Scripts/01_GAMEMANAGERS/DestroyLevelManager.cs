@@ -36,10 +36,10 @@ public class DestroyLevelManager : LevelManager
         //connect cinemachine with player
         cm = cinemachineGO.GetComponent<CinemachineVirtualCamera>();
 
+        //buildings
         buildings = FindObjectsOfType<BuildingScript3D>();
         buildingCount = buildings.Length;
         buildingsNum.text = buildingCount.ToString();
-
         shootBuildingControllers = FindObjectsOfType<ShootBuilding>();
 
         if (MASTER_GameManager.Instance.player != null)
@@ -58,6 +58,8 @@ public class DestroyLevelManager : LevelManager
 
         gameOverPrompt.SetActive(false);
         playerStats.SetDestroyWorldUI();
+
+        base.ActivatePlayerMovement(true);
     }
 
     // Update is called once per frame

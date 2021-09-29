@@ -10,10 +10,6 @@ public class PowerUpLevelManager : LevelManager
     [SerializeField] private Transform endCameraPoint;
     [SerializeField] private float outOfViewTimer = 3.0f;
 
-    //===
-    //NEW
-    //===
-
     [Header("Teleporter")]
     [SerializeField] private GameObject teleporterPrefab;
     private GameObject teleporter;
@@ -22,10 +18,9 @@ public class PowerUpLevelManager : LevelManager
     [SerializeField] private float timeBetweenBlinks = 0.05f;
     private bool blinkingStarted = false;
 
-    [Header("Instructions")]
+    [Header("Start / End UI")]
     [SerializeField] private GameObject instructionsCanvas;
-    //===
-
+    [SerializeField] private GameObject endLevelCanvas;
 
     private float timer;
 
@@ -33,47 +28,42 @@ public class PowerUpLevelManager : LevelManager
     {
         base.SwitchPlayerRenderer();
         base.OnLevelLoad();
-
-        //===
-        //NEW
-        //===
-        //instructions canvas
-        instructionsCanvas.SetActive(false);
-
         
+        //UI canvas
+        instructionsCanvas.SetActive(false);
+        endLevelCanvas.SetActive(false);
 
         //teleporter
         Vector3 teleporterStartPos = new Vector3(playerStartPos.position.x, 20, playerStartPos.position.z);
         teleporter = Instantiate(teleporterPrefab, teleporterStartPos, Quaternion.identity);
-        //===
 
         //set timer
         timer = outOfViewTimer;
 
         //set camera
         camController = Camera.main.GetComponent<PU_CameraController>();
-        //camController.Invoke("BeginCameraMovement", waitBeforeCamMove);
 
+        //player UI
         playerStats.SetPowerUpLevelUI();
     }
 
     public override void OnLevelUnload()
     {
-        //base.OnLevelUnload();
         playerStats.ResetCounters();
+        base.OnLevelUnload();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //NEW
         if (teleporter != null) TeleporterMovement();
 
         if (Camera.main.transform.position.z > endCameraPoint.position.z)
         {
             //Debug.Log("cam has passed end point");
             camController.EndCameraMovement();
-            MASTER_GameManager.Instance.GoToNextScene();
+            endLevelCanvas.SetActive(true);
+            //MASTER_GameManager.Instance.GoToNextScene();
         }
 
         if (!playerController.isPlayerInView())
@@ -91,7 +81,6 @@ public class PowerUpLevelManager : LevelManager
         else timer = outOfViewTimer;
     }
 
-    //NEW
     private void TeleporterMovement()
     {
         if (teleporter.transform.position.y > 8)
@@ -99,7 +88,6 @@ public class PowerUpLevelManager : LevelManager
         else if (!blinkingStarted)
         {
             teleporterSpeed = 0;
-            //SwitchPlayerRenderer();
             base.SwitchPlayerRenderer();
 
             StartCoroutine(BlinkTeleporter());
@@ -110,6 +98,7 @@ public class PowerUpLevelManager : LevelManager
     public void StartPowerUpLevel()
     {
         instructionsCanvas.SetActive(false);
+        base.ActivatePlayerMovement(true);
         camController.Invoke("BeginCameraMovement", waitBeforeCamMove);
     }
 
@@ -118,7 +107,6 @@ public class PowerUpLevelManager : LevelManager
         instructionsCanvas.SetActive(true);
     }
 
-    
     private IEnumerator BlinkTeleporter()
     {
         var teleporterRenderer = teleporter.GetComponent<Renderer>();
@@ -135,19 +123,6 @@ public class PowerUpLevelManager : LevelManager
         teleporterRenderer.enabled = true;
 
         Destroy(teleporter);
-        Debug.Log("cam moving in " + waitBeforeCamMove);
-        Invoke("SetInstructionCanvasActive", waitBeforeCamMove);
+        SetInstructionCanvasActive();
     }
-
-    //public override void SwitchPlayerRenderer()
-    //{
-    //    base.SwitchPlayerRenderer();
-    //}
-
-    //private void SwitchPlayerRenderer()
-    //{
-    //    var renderers = player.GetComponentsInChildren<Renderer>();
-    //    if (renderers[1].enabled) renderers[1].enabled = !renderers[1].enabled;
-    //    else renderers[1].enabled = true;
-    //}
 }

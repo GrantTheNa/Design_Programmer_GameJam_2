@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private NavMeshAgent myAgent;
     private Vector3 destination;
+    private bool canPlayerMove;
 
     public Animator animator;
 
@@ -23,12 +24,18 @@ public class PlayerController : MonoBehaviour
 
         myAgent = GetComponent<NavMeshAgent>();
         myAgent.speed = playerSpeed;
+        canPlayerMove = false;
+    }
+
+    public void CanPlayerMove(bool value)
+    {
+        canPlayerMove = value;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (canPlayerMove && Input.GetMouseButtonDown(0))
         {
             Ray myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
@@ -67,7 +74,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("attack");
         }
-
     }
 
     public void ResetPlayer(Transform playerStartPos)

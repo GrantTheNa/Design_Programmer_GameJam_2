@@ -33,7 +33,12 @@ public class LevelManager : MonoBehaviour
 
     public virtual void OnLevelUnload()
     {
+        ActivatePlayerMovement(false);
+    }
 
+    public virtual void ActivatePlayerMovement(bool value)
+    {
+        playerController.CanPlayerMove(value);
     }
 
     public virtual void SwitchPlayerRenderer()
@@ -53,6 +58,11 @@ public class LevelManager : MonoBehaviour
     {
         MASTER_GameManager.Instance.GoToHighScoresScreen();
         Debug.Log("lvl mgr - High score screen called");
+    }
+
+    public void GoToNextScene()
+    {
+        MASTER_GameManager.Instance.GoToNextScene();
     }
 
     public virtual void GoToMenuScreen()
