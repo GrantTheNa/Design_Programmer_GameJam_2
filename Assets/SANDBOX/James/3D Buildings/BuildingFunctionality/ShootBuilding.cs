@@ -31,7 +31,9 @@ public class ShootBuilding : MonoBehaviour
         //playerPos = MASTER_GameManager.Instance.player.transform;
         //playerPos = FindObjectOfType<CharacterController>().transform;
 
-        transform.LookAt(playerPos); // necessary? use update instead?
+        //transform.LookAt(playerPos); // necessary? use update instead?
+
+
         bScript = transform.parent.gameObject.GetComponent<BuildingScript3D>();
 
         shootTime = Random.Range(2f, 5f);
@@ -47,7 +49,7 @@ public class ShootBuilding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (shooting)
+        if (shooting && playerPos != null)
         {
             transform.LookAt(playerPos);
 
